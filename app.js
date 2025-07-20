@@ -17,7 +17,9 @@ const passport=require("passport");
 const LocalStratergy=require("passport-local");
 const User=require('./models/user.js');
 
-
+app.get("/", (req, res) => {
+    res.redirect("/listings"); // Or res.render("some_homepage.ejs");
+});
 
 //requiring files(of route directory)
 const listingRouter=require("./routes/listing.js");
